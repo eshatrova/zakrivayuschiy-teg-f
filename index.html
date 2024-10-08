@@ -10,10 +10,32 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
+    <meta name="color-scheme" content="dark light" />
     <script src="./scripts/set-theme.js"></script>
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   </head>
   <body class="page">
+
+    
     <header class="header">
+
+      <!-- <dialog open class="dialog">
+        <h2>Подпишитесь на нашу рассылку</h2>
+
+        <button
+        type="button" class="dialog-button"
+        onclick="window['dialog-id'].showModal();"
+        aria-controls="dialog-id"
+      >
+      ок
+      </button> -->
+      </dialog>
+      
+      <h1 class="title"> &lt;/HTML&gt;</h1>
+      <h2 class="subtitle">Закрывающий тег</h2>
+      
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -40,7 +62,45 @@
         </ul>
       </nav>
     </header>
-    <main></main>
-    <script src="./scripts/like.js"></script>
+
+  <main class="layout">
+    <div class="card">
+      <h3  class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+      <div class="img">
+        <img  src="./images/bus.png">
+        <span class="tag">
+          &lt;/HTML&gt;
+      </span>
+    </div>
+    <div class="card-description">
+      <p class="text">
+        Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.
+      </p>
+
+      <p> Место для ваших воспоминаний о начале обучения.</p>
+      <button class="card__like-button"> 
+        <p class="button__text"> button__text</p>
+      </button>
+    </div>
+    </div>
+
+<div class="card">
+  <h3  class="card-title"> Фритрек и нулевой спринт: Подготовка к работе</h3>
+  <img  alt="Белый автобус едет по дороге на фиолетовом фоне, ночью. У него оранжевая крыша и оранжевые декоративные вставки около колес."
+   class="img"
+  src="./images/bus.png">
+</div
+
+
+</main>
+
+
+<script src="./scripts/like.js"></script>
+ 
+
+
+
+
+
   </body>
 </html>

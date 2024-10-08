@@ -17,4 +17,178 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+
+  color: var(--font-color);
+  font-family: Inter, monospace, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: var(--font-weight-paragraph);
+  line-height: auto;
+  background-color: var(--bg-color);
+
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  width: 353px;
+  height: 191px;
+}
+
+.dialog-button {
+  width: 100%;
+  padding: 10px;
+  text-transform: uppercase;
+  color: var(--font-color);
+  font-family: "PressStart2P", monospace, sans-serif;
+  font-size: 14px;
+  border: 2px solid var(--font-color);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+  min-height: 364px;
+  padding-left: 120.5px;
+  padding-right: 120.5px;
+  border: 2px solid var(--font-color);
+}
+
+.title {
+  font-family: "PressStart2P", monospace, sans-serif;
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-family: "PressStart2P", monospace, sans-serif;
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+.theme-menu {
+  font-family: "PressStart2P", monospace, sans-serif;
+  font-size: 14px;
+  border: "none";
+  background-color: transparent;
+}
+
+.button {
+  background-color: transparent;
+  appearance: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--hover-effect);
+}
+
+.card {
+  border: 2px solid var(--font-color);
+  max-width: 702px;
+}
+
+.card-title {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--font-color);
+  padding: 3px 24px 3px 10px;
+}
+
+.tag {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: "PressStart2P", monospace, sans-serif;
+  font-size: 14px;
+  color: var(--font-color);
+  text-shadow: 0 0 2px var(--label-text-shadow);
+  mix-blend-mode: hard-light;
+}
+
+.img {
+  height: 696px;
+  width: 696px;
+  position: relative;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 25px;
+}
+
+.text {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--font-color);
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.like-icon {
+
+}
+
+.card__like-button {
+max-width: 130px;
+
+padding: 9px 17px;
+}
+
+.card__icon-button {
+
+}
+
+.is-liked {
+
+}
+
+.button__text {
+  
+}
+
+.arrow {
+  animation-timing-function:ease-in-out;
+  animation-duration: 0.5s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes arrow {
+  from {
+    translate:0 
+  }
+
+
+}
+
+
+
+
+@media (width <= 375px) {
 }

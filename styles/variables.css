@@ -1,1 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+  
+  :root.theme-light{
+    --font-weight:400;
+    --font-color: 000000;
+   
+    --bg-color:white;
+  }
+  :root.theme-dark {
+    --font-weight:465;
+    --font-color: #00CC14;
+ 
+    --bg-color:black;
+  }
+
+ 
