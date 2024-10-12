@@ -12,3 +12,74 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes arrow {
+    0% {
+      transform: translateX(5px);
+    }
+  
+    100% {
+      transform: translateX(9px);
+    }
+  }
+
+/* Кнопка-лайк */
+
+  @keyframes scale {
+    0% {
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* cердце */
+  @keyframes core {
+    0% {
+      fill: currentColor;
+    }
+  
+    100% {
+      fill: #ff0000;
+    }
+  }  
+
+  @keyframes sparks {
+    0% {
+      fill: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+    }
+   
+  
+
+  @keyframes main-body {
+    0% {
+      fill: transparent;
+    }
+  
+    100% {
+      fill: #ff0000;
+    }
+  }
+
+  @keyframes contur {
+    0% {
+      fill: currentColor;
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+      transform-origin: center;
+    }
+    100% {
+      fill: #ff0000;
+      transform: scale(1);
+    }
+  }

@@ -16,6 +16,9 @@
   --strip: #d3d3d3;
   --start-gradient: #e7e7e7;
   --end-gradient:#1a1a1a;
+  /* Цвет контура */
+  --heart-color:#FF0000;
+
 }
 
 :root.theme-dark {
