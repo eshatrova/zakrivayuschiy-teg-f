@@ -5,44 +5,56 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-:root.theme-light{
-    --font-weight:400;
+:root.theme-light {
+  --font-weight: 400;
+  --font-color: black;
+  --hover-effect: rgba(0, 0, 0, 0.6);
+  --bg-color: white;
+  --label-text-shadow: white;
+  --font-weight-paragraph: 400;
+  --font-weight-title: 700;
+  --strip: #d3d3d3;
+  --start-gradient: #e7e7e7;
+  --end-gradient:#1a1a1a;
+}
+
+:root.theme-dark {
+  --font-weight: 465;
+  --font-color: #00cc14;
+  --hover-effect: rgba(0, 204, 20, 0.6);
+  --bg-color: black;
+  --font-weight-paragraph: 465;
+  --font-weight-title: 785;
+  --strip: #000;
+  --start-gradient: #007f0c;
+  --end-gradient:#004306;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --font-weight: 400;
     --font-color: black;
-    --hover-effect:rgba(0, 0, 0, 0.6);
-    --bg-color:white;
-    --label-text-shadow:white;
+    --bg-color: white;
+    --hover-effect: rgba(0, 0, 0, 0.6);
+    --label-text-shadow: white;
     --font-weight-paragraph: 400;
     --font-weight-title: 700;
+    --strip: #d3d3d3;
+    --start-gradient: #e7e7e7;
+  --end-gradient:#1a1a1a;
   }
+}
 
-  :root.theme-dark {
-    --font-weight:465;
-    --font-color: #00CC14;
-    --bg-color:black;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-weight: 465;
+    --font-color: #00cc14;
+    --bg-color: black;
+    --hover-effect: rgba(0, 204, 20, 0.6);
     --font-weight-paragraph: 465;
     --font-weight-title: 785;
+    --strip: #000;
+    --start-gradient: #007f0c;
+  --end-gradient:#004306;
   }
-
-  
-  @media (prefers-color-scheme: light) {
-    :root {
-        --font-weight:400;
-        --font-color: black;
-        --bg-color:white;
-        --hover-effect:rgba(0, 0, 0, 0.6);
-        --label-text-shadow:white;
-        --font-weight-paragraph: 400;
-    --font-weight-title: 700;
-    }
-  }
-
-  
-  @media (prefers-color-scheme: dark) {
-    :root {
-        --font-weight:465;
-        --font-color: #00CC14;
-        --bg-color:black;
-        --font-weight-paragraph: 465;
-    --font-weight-title: 785;
-    }
-  }
+}
