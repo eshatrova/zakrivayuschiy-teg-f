@@ -77,7 +77,6 @@
   padding-bottom: 25px;
 
   margin-top: 100px;
- 
 
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
@@ -181,7 +180,7 @@
 .card {
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
-  margin-top:50px;
+  margin-top: 50px;
 }
 
 .card-title {
@@ -269,9 +268,9 @@
   gap: 25px;
 }
 .description-layout {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  gap:27px;
+  gap: 27px;
 }
 .text {
   font-family: inherit;
@@ -395,7 +394,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .button__text {
@@ -448,8 +446,8 @@
   padding-block: 15px;
   align-self: center;
   margin-top: 50px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .floppy-icon-button {
