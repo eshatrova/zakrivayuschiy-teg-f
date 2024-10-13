@@ -77,7 +77,7 @@
   padding-bottom: 25px;
 
   margin-top: 100px;
-  margin-bottom:50px;
+  margin-bottom: 50px;
 
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
@@ -181,7 +181,6 @@
 .card {
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
- 
 }
 
 .card-title {
@@ -309,7 +308,7 @@
 }
 
 .like-icon {
-  margin-top:3.5px;
+  margin-top: 3.5px;
   inline-size: auto;
   block-size: 36px;
 }
