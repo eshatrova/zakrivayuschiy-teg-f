@@ -1,6 +1,24 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+  --main-color: black;
+  --hover-effect: rgba(0, 0, 0, 0.6);
+  --bg-color: white;
+  --label-text-shadow: white;
 
+  /* настройки градиента */
+  --strip: #d3d3d3;
+  --start-gradient: #e7e7e7;
+  --end-gradient: #1a1a1a;
+
+  --font-weight: 400;
+  --font-weight-title: 700;
+
+  /* для кнопок с перекрашиванием */
+   --blend-mode: #fff;
+
+ /* цвет анимации сердца */
+  --heart: #ff0000;
+  --heart-contour: #000000;
  
 
 }

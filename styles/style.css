@@ -16,7 +16,8 @@
 
 .page {
   min-inline-size: 320px;
-  min-block-size: 100dvb;
+    min-inline-size: 320px;
+  
 
   font-family: "Inter-Variable", monospace, sans-serif;
   font-size: 18px;
@@ -61,10 +62,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  padding-bottom: 25px;
+ 
   text-transform: uppercase;
-  min-height: 368px;
-  padding: 136px 120px 25px;
+
+  padding-top:  clamp(7.5rem, 7.1522rem + 1.7391vw, 8.5rem);
+  padding-bottom: 25px;
+  padding-left:  clamp(0.875rem, -1.4293rem + 11.5217vw, 7.5rem);
+  padding-right: clamp(0.875rem, -1.4293rem + 11.5217vw, 7.5rem) ;
+  margin-left: auto;
+  margin-right: auto;
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
   max-width: 700px;
@@ -212,7 +218,7 @@
 }
 
 .img {
-  height: 696px;
+  max-height: 696px;
   object-fit: cover;
   width: 100%;
   position: relative;
@@ -247,7 +253,7 @@
 }
 
 .multiple {
-  filter: invert(-1) hue-rotate(-90deg ) contrast(50%);
+  filter: invert(1) contrast(50%) hue-rotate(-90deg);
 }
 
 .card-description {
@@ -489,5 +495,30 @@ dialog::backdrop {
 }
 
 @media (width <= 375px) {
+  .header {
+  height: 327px;
+  padding-top: 0px;
+  }
+  
+.img {
+  min-height: 375px;
+}
 
+.tag {
+  right: 11px;
+}
+
+.card {
+  min-height: 760px
+}
+
+.img-container {
+  min-height: 375px
+}
+
+.save__for_memories {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 }
