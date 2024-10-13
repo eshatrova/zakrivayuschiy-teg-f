@@ -182,7 +182,7 @@
 
 .card-title {
   font-weight: var(--font-weight-title);
-  font-variation-settings:'wdth'  var(--font-weight-title); 
+  font-variation-settings:'wdth' var(--font-weight-title); 
   line-height: 21.78px;
   text-align: left;
   font-family: inherit;
