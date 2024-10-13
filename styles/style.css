@@ -64,8 +64,7 @@
   padding-bottom: 25px;
   text-transform: uppercase;
   min-height: 368px;
-  padding-left: 120.5px;
-  padding-right: 120.5px;
+  padding: 136px 120px 25px;
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
   max-width: 700px;
@@ -73,7 +72,7 @@
 
 .title {
   font-family: "PressStart2P", monospace, sans-serif;
-  font-size: clamp(3.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-size: clamp(3.0625rem, 1.9598rem + 4.8338vw, 4.0625rem);
   margin-bottom: 20px;
 }
 
@@ -81,6 +80,7 @@
   font-family: "PressStart2P", monospace, sans-serif;
   font-size: 23px;
   margin-bottom: 25px;
+  font-size: clamp(0.875rem, 0.2547rem + 2.719vw, 1.4375rem);
 }
 
 .theme-menu {
@@ -175,12 +175,11 @@
 }
 
 .card-title {
-  font-weight: 700;
+  font-weight: var(--font-weight-title);
   line-height: 21.78px;
   text-align: left;
   font-family: inherit;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: inherit;
   color: var(--main-color);
   padding: 3px 24px 6px 10px;
 }
@@ -261,14 +260,13 @@
   font-family: inherit;
   line-height: 21px;
   color: var(--main-color);
-  line-height: 21px;
 }
 
 .card__controls {
   align-self: end;
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
 }
 
 /* //анимация сердца  */
@@ -286,13 +284,13 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--text-color);
+  outline: 2px solid var(--main-color);
   transition: outline 0.3s ease;
 }
 
 .like-icon {
   inline-size: auto;
-  block-size: 32px;
+  block-size: 36px;
 }
 
 .sparks {
@@ -312,13 +310,13 @@
 }
 
 .like-icon:active .core {
-  fill: var(--heart-like);
+  fill: var(--heart);
   transition: fill 0.3s;
   transition-delay: 0;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--heart-like);
+  fill: var(--heart);
   transition: fill 0.3s;
   transition-delay: 0;
 }
@@ -335,19 +333,19 @@
 }
 
 .like-icon:active .main-body {
-  fill: var(--heart-like);
+  fill: var(--heart);
   transition: fill 0.3s;
   transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--heart-like);
+  fill: var(--heart);
   transition: fill 0.3s linear;
   transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--heart-like);
+  fill: var(--heart);
   transition: fill 0.3s;
   transition-delay: 0.06s;
 }
@@ -384,13 +382,13 @@ button {
 .button__text {
   font-size: 14px;
   line-height: 12.6px;
+  font-weight: var(--font-weight);
   color: var(--blend-mode);
   cursor: pointer;
   font-family: "PressStart2P", monospace, sans-serif;
   z-index: 2;
   mix-blend-mode: difference;
   position: relative;
-  cursor: pointer;
 }
 
 .button:focus-visible {
@@ -437,7 +435,7 @@ button {
   mix-blend-mode: difference;
   z-index: 1;
   width: 21px;
-  height: 21px;
+  height: 22px;
   fill: var(--blend-mode);
 }
 
@@ -490,4 +488,5 @@ dialog::backdrop {
 }
 
 @media (width <= 375px) {
+
 }
