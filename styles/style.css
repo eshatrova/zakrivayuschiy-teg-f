@@ -36,6 +36,8 @@
   align-items: center;
   margin-top: 100px;
   margin-bottom: 103px;
+  gap:50px;
+  margin-inline: clamp(0rem, -8.1426rem + 34.7418vw, 23.125rem);
 }
 
 .background-gradient {
@@ -66,13 +68,13 @@
 
   padding-top: clamp(7.5rem, 7.1522rem + 1.7391vw, 8.5rem);
   padding-bottom: 25px;
-  padding-left: clamp(0.875rem, -1.4293rem + 11.5217vw, 7.5rem);
-  padding-right: clamp(0.875rem, -1.4293rem + 11.5217vw, 7.5rem);
-  margin-left: auto;
-  margin-right: auto;
+ width: 100%;
+
+  margin-bottom: 50px;
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
-  max-width: 700px;
+ 
+  
 }
 
 .title {
@@ -167,11 +169,9 @@
 .layout {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  
   gap: 50px;
-  margin-top: 100px;
-  max-width: 700px;
-  margin-inline: clamp(0rem, -8.1426rem + 34.7418vw, 23.125rem);
+ 
 }
 
 .card {
@@ -183,7 +183,6 @@
   font-weight: var(--font-weight-title);
   font-variation-settings: "wdth" var(--font-weight-title);
   line-height: 21.78px;
-  text-align: left;
   font-family: inherit;
   font-size: inherit;
   color: var(--main-color);
@@ -215,8 +214,7 @@
 .img-container {
   position: relative;
   display: flex;
-  flex-shrink: 0;
-  block-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
+  block-size: clamp(23.1876rem, 16.0552rem + 30.5163vw, 43.5rem);
 }
 
 .img {
@@ -224,6 +222,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
+  aspect-ratio: 1 / 1;
 }
 
 .blur {
@@ -272,6 +271,7 @@
 }
 
 .card__controls {
+  margin-top: -2px;
   align-self: end;
   display: flex;
   align-items: center;
@@ -497,6 +497,7 @@ dialog::backdrop {
 }
 
 @media (width <= 375px) {
+
   .header {
     height: 327px;
     padding-top: 0px;
