@@ -77,6 +77,7 @@
   padding-bottom: 25px;
 
   margin-top: 100px;
+  margin-bottom:50px;
 
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
@@ -180,7 +181,7 @@
 .card {
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
-  margin-top: 50px;
+ 
 }
 
 .card-title {
@@ -218,7 +219,7 @@
 .img-container {
   position: relative;
   display: flex;
-  block-size: clamp(23.1876rem, 16.0552rem + 30.5163vw, 43.5rem);
+  block-size: clamp(23.4375rem, 16.4158rem + 35.1087vw, 43.625rem);
 }
 
 .img {
@@ -265,8 +266,9 @@
   display: flex;
   flex-direction: column;
   padding: 25px;
-  gap: 25px;
+  gap: 27px;
 }
+
 .description-layout {
   display: flex;
   flex-direction: column;
@@ -283,7 +285,8 @@
   align-self: end;
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 5px;
 }
 
 /* //анимация сердца  */
@@ -306,6 +309,7 @@
 }
 
 .like-icon {
+  margin-top:3.5px;
   inline-size: auto;
   block-size: 36px;
 }
@@ -381,7 +385,6 @@
   position: relative;
   inline-size: 130px;
   block-size: 38px;
-  margin-top: 2px;
   background-color: transparent;
   overflow: hidden;
   padding: 0;
@@ -435,7 +438,7 @@
 
 /* //сохранить на память */
 
-.save__for_memories {
+.button_type_save {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -445,9 +448,6 @@
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   padding-block: 15px;
   align-self: center;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .floppy-icon-button {
@@ -529,7 +529,7 @@ dialog::backdrop {
     min-height: 375px;
   }
 
-  .save__for_memories {
+  .button_type_save {
     display: flex;
     flex-direction: column;
     gap: 8px;
