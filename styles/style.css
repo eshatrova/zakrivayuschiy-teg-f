@@ -245,8 +245,9 @@
 .sepia {
   filter: sepia(80%);
 }
+
 .multiple {
-  filter: invert(-1) hue-rotate(-90deg);
+  filter: invert(-1) hue-rotate(-90deg ) contrast(50%);
 }
 
 .card-description {
