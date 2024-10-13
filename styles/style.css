@@ -266,9 +266,13 @@
   display: flex;
   flex-direction: column;
   padding: 25px;
-  gap: 27px;
+  gap: 25px;
 }
-
+.description-layout {
+  display:flex;
+  flex-direction: column;
+  gap:27px;
+}
 .text {
   font-family: inherit;
   line-height: 21px;
