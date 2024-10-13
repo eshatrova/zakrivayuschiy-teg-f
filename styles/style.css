@@ -16,6 +16,8 @@
 
 .page {
   min-inline-size: 320px;
+  max-inline-size: 1440px;
+  min-block-size: 100dvb;
 
   font-family: "Inter", monospace, sans-serif;
 
@@ -26,19 +28,26 @@
 
   background-color: var(--bg-color);
   color: var(--main-color);
-
+  margin: 0 auto;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
 
+.content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
+
   margin-bottom: 103px;
   gap: 50px;
-  margin-inline: clamp(0rem, -8.1426rem + 34.7418vw, 23.125rem);
+
+  max-width: 700px;
 }
+/* .cards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+} */
 
 .background-gradient {
   background-size: cover;
@@ -63,14 +72,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: end;
-
   text-transform: uppercase;
-
   padding-top: clamp(7.5rem, 7.1522rem + 1.7391vw, 8.5rem);
   padding-bottom: 25px;
-  width: 100%;
 
-  margin-bottom: 50px;
+  margin-top: 100px;
+ 
+
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
 }
@@ -167,13 +175,13 @@
 .layout {
   display: flex;
   flex-direction: column;
-
   gap: 50px;
 }
 
 .card {
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
+  margin-top:50px;
 }
 
 .card-title {
@@ -383,6 +391,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .button__text {
@@ -434,6 +443,9 @@
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   padding-block: 15px;
   align-self: center;
+  margin-top: 50px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .floppy-icon-button {
