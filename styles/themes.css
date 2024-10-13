@@ -18,6 +18,7 @@
   --end-gradient:#1a1a1a;
   /* Цвет контура */
   --heart-color:#FF0000;
+  --blend-mode:#fff;
 
 }
 
@@ -31,6 +32,7 @@
   --strip: #000;
   --start-gradient: #007f0c;
   --end-gradient:#004306;
+  --blend-mode:#000;
 }
 
 @media (prefers-color-scheme: light) {

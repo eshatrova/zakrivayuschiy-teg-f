@@ -17,7 +17,8 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-
+  
+  
   color: var(--font-color);
   font-family: "Inter-Variable", monospace, sans-serif;
   font-size: 18px;
@@ -72,7 +73,7 @@
 
 .title {
   font-family: "PressStart2P", monospace, sans-serif;
-  font-size: 65px;
+  font-size: clamp(3.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   margin-bottom: 20px;
 }
 
@@ -141,7 +142,6 @@
   width: 100%;
 }
 
-
 .theme-menu__button:disabled {
   position: relative;
   color: var(--font-color);
@@ -160,6 +160,7 @@
 .layout {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 50px;
   margin-top: 100px;
   max-width: 700px;
@@ -188,9 +189,17 @@
   font-family: "PressStart2P", monospace, sans-serif;
   font-size: 14.3px;
   color: var(--font-color);
-  text-shadow: 0 0 3px var(--label-text-shadow, #fff);
+  -webkit-text-stroke: 0.3px  var(--label-text-shadow);
   mix-blend-mode: hard-light;
 }
+
+@supports((text-stroke: 0.3px  var(--label-text-shadow)) or (-webkit-text-stroke: 0.3px  var(--label-text-shadow))) {
+  tag {
+      -webkit-text-stroke: 0.3px  var(--label-text-shadow);
+      text-stroke:0.3px  var(--label-text-shadow);
+      text-shadow: 0 0 3px var(--label-text-shadow);
+  }
+} 
 
 .img-container {
   object-fit: cover;
@@ -249,178 +258,219 @@
 .card__controls {
   align-self: end;
   display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* //КНОПКА ЛАЙК */
+
+.card__icon-button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: 2px solid transparent;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--text-color);
+  transition: outline 0.3s ease;
+}
+
+.like-icon {
+  inline-size: auto;
+  block-size: 32px;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s linear;
+  transition-delay: 0.03s;
+}
+
+.like-icon:hover .core {
+  fill: var(--heart-contour);
+  transition: fill 0.3s;
+  transition-delay: 0;
+}
+
+.like-icon:active .core {
+  fill: var(--heart-like);
+  transition: fill 0.3s;
+  transition-delay: 0;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-like);
+  transition: fill 0.3s;
+  transition-delay: 0;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--heart-contour);
+  transition: fill 0.3s;
+  transition-delay: 0.05s;
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-like);
+  transition: fill 0.3s;
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-like);
+  transition: fill 0.3s linear;
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-like);
+  transition: fill 0.3s;
+  transition-delay: 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  animation: scale1 0.3s 0.1s ease-in alternate;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s 0.3s ease-in alternate;
+}
+
+/* 
+///////////////// */
+.card__like-button {
+  position: relative;
+  inline-size: 130px;
+  block-size: 38px;
+  margin-top: 2px;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 0;
+}
+
+button {
+  position: relative;
+  background-color: var(--bg-color);
+  border: 2px solid var(--font-color);
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap:7px;
 }
 
 .button__text {
   font-size: 14px;
-  position: relative;
-  color: var(--font-color);
+  line-height: 12.6px;
+  color: var(--blend-mode);
   cursor: pointer;
   font-family: "PressStart2P", monospace, sans-serif;
   z-index: 2;
   mix-blend-mode: difference;
-  font-size: 14px;
   position: relative;
-  color: #fff;
-  mix-blend-mode: difference;
   cursor: pointer;
 }
 
-.card__like-button {
-  position: relative;
-  width: 126px;
-  height: 38px;
-  padding: 0px;
-  z-index: 2;
-  position: relative;
-
-  align-self: flex-end;
-  margin-top: 2px;
-  height: 38px;
-  /* max-width: 130px; */
-  background-color: var(--bg-color);
-  padding: 12.5px 37px;
-  color: var(--font-color);
-  overflow: hidden;
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--font-color);
+  transition: box-shadow 0.3s ease;
 }
 
-.card__like-button:focus {
-  box-shadow: 2px 2px 0px var(--font-color);
-}
-
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0px var(--font-color);
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card__like-button:hover {
-  position: relative;
-}
-
-.card__like-button:hover::before {
-  position: absolute;
+.button::after {
   content: "";
-  inset: 0;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: var(--font-color);
-  inline-size: 100%;
-  animation-name: scale;
-  animation-timing-function: ease-in-out;
-  animation-duration: 0.5s;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-}
-
-/* Кнопка- Сердечко */
-
-
-
-.card__icon-button {
-  font-size: 0;
-  border: 2px solid transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-height: 38px;
-  background-color: transparent;
-
-}
-
-.heart {
-  width: 37px;
-  height: 37px;
-  text-align: center;
-}
-.heart:focus{
-  outline:none;
-}
-
-.heart:focus-visible {
-  border: 2px solid var(--font-color);
-}
-
-.sparks {
-  opacity: 0%;
-}
-
-.like-icon {
-  fill: var(--font-color);
-  width: 39px;
-  height: 36px;
-}
-
-.core {
-  fill: transparent;
-  transition: fill;
-  transition-delay: 0.03s;
-  transition-timing-function: linear;
-}
-.main-body {
-  fill: transparent;
-  transition: fill;
-  transition-duration: 0.3s;
-  transition-timing-function: linear;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 0;
   
 }
 
-
-/* наведение */
-.like-icon:hover .core {
-  fill: var(--font-color);
-  transition-duration: 0.03s;
-}
-.like-icon:hover .main-body {
-  transition-delay: 0.05s;
-  fill: var(--font-color);
+.button:hover::after {
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
 }
 
-/* активно когда зажали на сердце */
-.like-icon:active .core{
-  fill: var(--heart-color);
-  transition-duration: 0.03s;
+/* //сохранить на память */
+
+.save__for_memories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  gap: 8px;
+  position: relative;
+  inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+  padding-block: 15px;
+  align-self: center;
 }
 
-.like-icon:active .main-body{
-  fill: var(--heart-color);
-  transition-duration: 0.05s;
+.floppy-icon-button {
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 1;
+  width: 21px;
+  height: 21px;
+  fill: var(--blend-mode);
 }
 
-/* клик */
-.like-icon.is-liked .core {
-  animation: 0.3s core forwards;
-}
-
-.like-icon.is-liked .main-body {
-  animation: 0.3s main-body forwards;
-  animation-delay: 0.2s;
-}
-
-.like-icon.is-liked .contur {
-  animation: 0.3s contur forwards;
-  animation-delay:0.6s;
-}
-
-.like-icon.is-liked .heart {
-  animation: 0.3s contur ease-in ;
-  animation-delay: 0.1s;
-}
-
-.like-icon.is-liked .sparks {
-  animation-name: sparks;
-  animation-duration: 0.3s;
-  animation-direction: alternate;
+.dialog {
+  padding: 0;
+  border: none;
 }
 
 
-
-.dialog:opened {
+.dialog-layout {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
   padding: 30px;
-  width: 353px;
-  height: 191px;
+  border: 2px solid var(--font-color);
+  background-color: var(--bg-color);
+  font-family:"PressStart2P", monospace, sans-serif;
+  color:var(--font-color);
+}
+
+.dialog__container {
+  display: flex;
+  inline-size: 293px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dialog-text {
+  inline-size: 234px;
+  font-size: 14px;
+}
+
+
+
+
+.floppy-icon-dialog {
+  width: 39px;
+  height: 39px;
+  color: var(--font-color);
 }
 
 dialog::backdrop {
@@ -429,16 +479,11 @@ dialog::backdrop {
 }
 
 .dialog-button {
-  width: 100%;
-  padding: 10px;
-  text-transform: uppercase;
-  color: var(--font-color);
-  font-family: "PressStart2P", monospace, sans-serif;
-  font-size: 14px;
-  border: 2px solid var(--font-color);
+  
+  block-size: 38px;
+  inline-size: 293px;
+ 
 }
 
 @media (width <= 375px) {
-
-
 }
