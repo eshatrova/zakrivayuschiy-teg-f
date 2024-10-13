@@ -20,12 +20,11 @@
   --font-weight-title: 700;
 
   /* для кнопок с перекрашиванием */
-   --blend-mode: #fff;
+  --blend-mode: #fff;
 
- /* цвет анимации сердца */
+  /* цвет анимации сердца */
   --heart: #ff0000;
   --heart-contour: #000000;
-  
 }
 
 :root.theme-dark {
@@ -42,8 +41,8 @@
   --font-weight: 465;
   --font-weight-title: 785;
 
- /* для кнопок с перекрашиванием */
-  --blend-mode: #00CC14;
+  /* для кнопок с перекрашиванием */
+  --blend-mode: #00cc14;
 
   /* цвет анимации сердца */
   --heart: #ff0000;
@@ -56,46 +55,44 @@
     --hover-effect: rgba(0, 0, 0, 0.6);
     --bg-color: white;
     --label-text-shadow: white;
-  
+
     /* настройки градиента */
     --strip: #d3d3d3;
     --start-gradient: #e7e7e7;
     --end-gradient: #1a1a1a;
-  
+
     --font-weight: 400;
     --font-weight-title: 700;
-  
+
     /* для кнопок с перекрашиванием */
-     --blend-mode: #fff;
-  
-   /* цвет анимации сердца */
+    --blend-mode: #fff;
+
+    /* цвет анимации сердца */
     --heart: #ff0000;
     --heart-contour: #000000;
-   
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --main-color: #00cc14;
-  --hover-effect: rgba(0, 204, 20, 0.6);
-  --bg-color: black;
-  --label-text-shadow: #007f0c;
+    --hover-effect: rgba(0, 204, 20, 0.6);
+    --bg-color: black;
+    --label-text-shadow: #007f0c;
 
-  /* настройки градиента */
-  --strip: #000;
-  --start-gradient: #007f0c;
-  --end-gradient: #004306;
+    /* настройки градиента */
+    --strip: #000;
+    --start-gradient: #007f0c;
+    --end-gradient: #004306;
 
-  --font-weight: 465;
-  --font-weight-title: 785;
+    --font-weight: 465;
+    --font-weight-title: 785;
 
- /* для кнопок с перекрашиванием */
-  --blend-mode: #00CC14;
+    /* для кнопок с перекрашиванием */
+    --blend-mode: #00cc14;
 
-  /* цвет анимации сердца */
-  --heart: #ff0000;
-  --heart-contour: #000000;
-   
+    /* цвет анимации сердца */
+    --heart: #ff0000;
+    --heart-contour: #000000;
   }
 }

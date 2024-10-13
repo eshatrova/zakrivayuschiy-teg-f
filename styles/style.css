@@ -16,8 +16,7 @@
 
 .page {
   min-inline-size: 320px;
-    min-inline-size: 320px;
-  
+  min-inline-size: 320px;
 
   font-family: "Inter-Variable", monospace, sans-serif;
   font-size: 18px;
@@ -62,13 +61,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: end;
- 
+
   text-transform: uppercase;
 
-  padding-top:  clamp(7.5rem, 7.1522rem + 1.7391vw, 8.5rem);
+  padding-top: clamp(7.5rem, 7.1522rem + 1.7391vw, 8.5rem);
   padding-bottom: 25px;
-  padding-left:  clamp(0.875rem, -1.4293rem + 11.5217vw, 7.5rem);
-  padding-right: clamp(0.875rem, -1.4293rem + 11.5217vw, 7.5rem) ;
+  padding-left: clamp(0.875rem, -1.4293rem + 11.5217vw, 7.5rem);
+  padding-right: clamp(0.875rem, -1.4293rem + 11.5217vw, 7.5rem);
   margin-left: auto;
   margin-right: auto;
   border: 2px solid var(--main-color);
@@ -496,29 +495,29 @@ dialog::backdrop {
 
 @media (width <= 375px) {
   .header {
-  height: 327px;
-  padding-top: 0px;
+    height: 327px;
+    padding-top: 0px;
   }
-  
-.img {
-  min-height: 375px;
-}
 
-.tag {
-  right: 11px;
-}
+  .img {
+    min-height: 375px;
+  }
 
-.card {
-  min-height: 760px
-}
+  .tag {
+    right: 11px;
+  }
 
-.img-container {
-  min-height: 375px
-}
+  .card {
+    min-height: 760px;
+  }
 
-.save__for_memories {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+  .img-container {
+    min-height: 375px;
+  }
+
+  .save__for_memories {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
