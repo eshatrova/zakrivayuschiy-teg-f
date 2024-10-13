@@ -1,1 +1,1 @@
-https://github.com/eshatrova/slozhno-sosredotochitsya
+https://github.com/eshatrova/zakrivayuschiy-teg-f
