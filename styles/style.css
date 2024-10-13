@@ -16,10 +16,9 @@
 
 .page {
   min-inline-size: 320px;
-  min-inline-size: 320px;
 
   font-family: "Inter", monospace, sans-serif;
-  
+
   font-size: 18px;
   font-style: normal;
   font-weight: var(--font-weight-paragraph);
@@ -84,7 +83,6 @@
 
 .subtitle {
   font-family: "PressStart2P", monospace, sans-serif;
-  font-size: 23px;
   margin-bottom: 25px;
   font-size: clamp(0.875rem, 0.2547rem + 2.719vw, 1.4375rem);
 }
@@ -173,6 +171,7 @@
   gap: 50px;
   margin-top: 100px;
   max-width: 700px;
+  margin-inline: clamp(0rem, -8.1426rem + 34.7418vw, 23.125rem);
 }
 
 .card {
@@ -182,7 +181,7 @@
 
 .card-title {
   font-weight: var(--font-weight-title);
-  font-variation-settings:'wdth' var(--font-weight-title); 
+  font-variation-settings: "wdth" var(--font-weight-title);
   line-height: 21.78px;
   text-align: left;
   font-family: inherit;
@@ -215,14 +214,16 @@
 
 .img-container {
   position: relative;
+  display: flex;
+  flex-shrink: 0;
   block-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
 }
 
 .img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
 }
 
 .blur {
@@ -378,7 +379,7 @@
   padding: 0;
 }
 
-button {
+.button {
   position: relative;
   background-color: var(--bg-color);
   border: 2px solid var(--main-color);
