@@ -83,13 +83,14 @@
   background-color: var(--bg-color);
 }
 
-.title {
+.logo-link {
   font-family: "PressStart2P", monospace, sans-serif;
   font-size: clamp(3.0625rem, 1.9598rem + 4.8338vw, 4.0625rem);
   margin-bottom: 20px;
+  
 }
 
-.subtitle {
+.title {
   font-family: "PressStart2P", monospace, sans-serif;
   margin-bottom: 25px;
   font-size: clamp(0.875rem, 0.2547rem + 2.719vw, 1.4375rem);
@@ -119,12 +120,12 @@
   font-size: 14px;
   cursor: pointer;
   padding: 0;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:hover {
   cursor: pointer;
   color: var(--hover-effect);
-  transition: opacity 0.3s ease;
   opacity: 60%;
 }
 
@@ -185,12 +186,15 @@
 
 .card-title {
   font-weight: var(--font-weight-title);
-  font-variation-settings: "wdth" var(--font-weight-title);
-  line-height: 21.78px;
+  font-variation-settings: "wght" var(--font-weight-title);
+  /* line-height: 100%; */
   font-family: inherit;
   font-size: inherit;
   color: var(--main-color);
   padding: 5px 24px 5px 10px;
+  
+  
+  
 }
 
 .tag {
@@ -200,20 +204,23 @@
   font-family: "PressStart2P", monospace, sans-serif;
   font-size: 14.3px;
   color: var(--main-color);
-  -webkit-text-stroke: 0.3px var(--label-text-shadow);
+  -webkit-text-stroke: 0.3px var(--label-text-shadow); 
+  text-shadow: 0 0 0.3px var(--label-text-shadow); 
+
   mix-blend-mode: hard-light;
 }
 
 @supports (
   (text-stroke: 0.3px var(--label-text-shadow)) or
-    (-webkit-text-stroke: 0.3px var(--label-text-shadow))
+  (-webkit-text-stroke: 0.3px var(--label-text-shadow))
 ) {
-  tag {
+  .tag {
     -webkit-text-stroke: 0.3px var(--label-text-shadow);
     text-stroke: 0.3px var(--label-text-shadow);
-    text-shadow: 0 0 3px var(--label-text-shadow);
+    text-shadow: none;
   }
 }
+
 
 .img-container {
   position: relative;
@@ -280,22 +287,26 @@
 }
 
 .card__controls {
-  margin-top: -2px;
+  
   align-self: end;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
+  height: 38px;
 }
 
 /* //анимация сердца  */
 
 .card__icon-button {
+  /* width: 27px;
+  height: 24px; */
   margin: 0;
-  padding: 0;
+  padding:  0;
   background-color: transparent;
   border: none;
   outline: 2px solid transparent;
+  transition: outline 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -304,7 +315,6 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--main-color);
-  transition: outline 0.3s ease;
 }
 
 .like-icon {
@@ -316,6 +326,10 @@
 .sparks {
   opacity: 0;
 }
+.heart {
+  transform: scale(1);
+  transform-origin: center;
+}
 
 .like-icon .core {
   fill: transparent;
@@ -325,36 +339,36 @@
 
 .like-icon:hover .core {
   fill: var(--heart-contour);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
   transition-delay: 0;
 }
 
 .like-icon:active .core {
   fill: var(--heart);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
   transition-delay: 0;
 }
 
 .like-icon.is-liked .core {
   fill: var(--heart);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
   transition-delay: 0;
 }
 
 .like-icon .main-body {
   fill: transparent;
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
   fill: var(--heart-contour);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
   transition-delay: 0.05s;
 }
 
 .like-icon:active .main-body {
   fill: var(--heart);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
   transition-delay: 0.05s;
 }
 
@@ -366,7 +380,7 @@
 
 .like-icon.is-liked .contour {
   fill: var(--heart);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
   transition-delay: 0.06s;
 }
 
@@ -396,6 +410,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: box-shadow 0.3s ease; 
 }
 
 .button__text {
@@ -413,7 +428,6 @@
 .button:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 0 var(--main-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .button::after {
@@ -497,7 +511,7 @@
 }
 
 dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0);
   opacity: 75%;
 }
 
@@ -508,7 +522,7 @@ dialog::backdrop {
 
 @media (width <= 375px) {
   .header {
-    height: 327px;
+    /* height: 327px; */
     padding-top: 0px;
   }
 
@@ -521,7 +535,7 @@ dialog::backdrop {
   }
 
   .card {
-    min-height: 760px;
+   
   }
 
   .img-container {

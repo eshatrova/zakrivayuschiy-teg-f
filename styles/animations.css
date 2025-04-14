@@ -37,14 +37,9 @@
 
   /* cердце */
   @keyframes scale1 {
-    from {
-      transform: scale(1);
-      transform-origin: center;
-    }
   
     to {
       transform: scale(1.5);
-      transform-origin: center;
     }
   }
 
